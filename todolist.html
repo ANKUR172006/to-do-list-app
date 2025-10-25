@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Pro</title>
+    <link rel="stylesheet" href="to_do_list.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ To-Do List Pro</h1>
+        <div class="subtitle">Get things done with style</div>
+        
+        <div class="input-container">
+            <input type="text" id="todoInput" placeholder="What's on your mind?" />
+            <button id="addBtn">+ Add Task</button>
+        </div>
+
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Done</button>
+            </div>
+            <button class="clear-btn" onclick="clearCompleted()">Clear Done</button>
+        </div>
+
+        <ul id="todoList"></ul>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalStat">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="activeStat">0</div>
+                <div class="stat-label">Active</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedStat">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="priority-menu" id="priorityMenu">
+        <div class="priority-option" onclick="setPriority('high')">
+            <div class="priority-dot" style="background: #ff4757;"></div>
+            <span>High Priority</span>
+        </div>
+        <div class="priority-option" onclick="setPriority('medium')">
+            <div class="priority-dot" style="background: #ffa502;"></div>
+            <span>Medium Priority</span>
+        </div>
+        <div class="priority-option" onclick="setPriority('low')">
+            <div class="priority-dot" style="background: #2ed573;"></div>
+            <span>Low Priority</span>
+        </div>
+    </div>
+
+    <script src="to_list.js"></script>
+</body>
+</html>
